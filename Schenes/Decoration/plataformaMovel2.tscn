@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://crrdxgrfhc868"]
+
+[ext_resource type="Texture2D" uid="uid://npegbal6s5ab" path="res://GameMAUMAU/TILESET/terrain_complete/Terrain (32x32).png" id="1_052rf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qoni0"]
+size = Vector2(171, 40.5)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-39.25, 6.25)
+scale = Vector2(1.82632, 1.40323)
+texture = ExtResource("1_052rf")
+region_enabled = true
+region_rect = Rect2(0.996353, 128.335, 95.278, 31.3472)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
+position = Vector2(-40.5, 5.75)
+shape = SubResource("RectangleShape2D_qoni0")

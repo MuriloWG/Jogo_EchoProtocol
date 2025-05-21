@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://diulqyxubtmxn"]
+
+[ext_resource type="Texture2D" uid="uid://bhubwrwhbolsy" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Fountain/1.png" id="1_wf4ma"]
+[ext_resource type="Texture2D" uid="uid://drlcgqes0bmoo" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Fountain/2.png" id="2_m42f4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sv27b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wf4ma")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_m42f4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_163w2"]
+size = Vector2(30, 3)
+
+[node name="Fonte" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_sv27b")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0760072
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -25.5)
+shape = SubResource("RectangleShape2D_163w2")
+one_way_collision = true
+metadata/_edit_lock_ = true

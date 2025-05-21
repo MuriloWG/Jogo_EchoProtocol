@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf5lv6r6xoic2"]
+
+[ext_resource type="Script" path="res://Script/bullet.gd" id="1_huf2p"]
+[ext_resource type="Texture2D" uid="uid://65tugmychegp" path="res://GameMAUMAU/GUNS/WEAPONS3/5 Bullets/1.png" id="2_x8m53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btv4m"]
+size = Vector2(4, 2)
+
+[node name="Bullet" type="Area2D"]
+collision_mask = 14
+script = ExtResource("1_huf2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_btv4m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(0, 2)
+scale = Vector2(1, 0.916667)
+texture = ExtResource("2_x8m53")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

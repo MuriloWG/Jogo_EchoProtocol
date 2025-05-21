@@ -1,0 +1,156 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdf5hlleh3geu"]
+
+[ext_resource type="Script" path="res://Script/mensageiro.gd" id="1_aolqq"]
+[ext_resource type="Texture2D" uid="uid://bhciqfwfmyki5" path="res://GameMAUMAU/ENEMIES/2/Idle.png" id="1_ov4oe"]
+[ext_resource type="FontFile" uid="uid://bxq5l1nkjko5a" path="res://GameMAUMAU/GUI_HUD GAME/10 Font/CyberpunkCraftpixPixel.otf" id="3_51ytv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qdrs"]
+size = Vector2(123, 87)
+
+[sub_resource type="Animation" id="Animation_cj4lw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ov4oe")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_e6w2p"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ov4oe")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2lbn4"]
+_data = {
+"RESET": SubResource("Animation_cj4lw"),
+"idle": SubResource("Animation_e6w2p")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_shulj"]
+font = ExtResource("3_51ytv")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(1, 1, 1, 1)
+
+[node name="Mensageiro" type="Node2D"]
+script = ExtResource("1_aolqq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, -4)
+shape = SubResource("RectangleShape2D_5qdrs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15, -13)
+scale = Vector2(1.98958, 1.78125)
+texture = ExtResource("1_ov4oe")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2lbn4")
+}
+
+[node name="Label" type="Label" parent="."]
+offset_left = -53.0
+offset_top = -62.0
+offset_right = 15.0
+offset_bottom = -39.0
+theme_override_fonts/font = ExtResource("3_51ytv")
+label_settings = SubResource("LabelSettings_shulj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

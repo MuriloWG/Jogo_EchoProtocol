@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2vhajfoxmnb5"]
+
+[ext_resource type="PackedScene" uid="uid://bdf5hlleh3geu" path="res://Schenes/mensageiro.tscn" id="1_j8exh"]
+[ext_resource type="Script" path="res://Script/mensageiro2.gd" id="2_2awnn"]
+
+[node name="Mensageiro2" type="Node2D"]
+
+[node name="Mensageiro" parent="." instance=ExtResource("1_j8exh")]
+script = ExtResource("2_2awnn")

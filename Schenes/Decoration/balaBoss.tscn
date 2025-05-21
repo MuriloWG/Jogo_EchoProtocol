@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://djgkig1brqddw"]
+
+[ext_resource type="Texture2D" uid="uid://cbgtwfncswc78" path="res://GameMAUMAU/BOSSES/BOS/3/Projectile.png" id="1_74e6k"]
+[ext_resource type="Script" path="res://Script/balaBoss.gd" id="1_sqjq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lppro"]
+size = Vector2(9, 2)
+
+[node name="Area2D" type="Area2D"]
+z_index = 3
+collision_layer = 2
+script = ExtResource("1_sqjq8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -2)
+shape = SubResource("RectangleShape2D_lppro")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, -2)
+texture = ExtResource("1_74e6k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://owhy85fxxvgg"]
+
+[ext_resource type="Script" path="res://Script/Portal.gd" id="1_4eyxn"]
+[ext_resource type="Texture2D" uid="uid://dp4eb0icpfb5v" path="res://GameMAUMAU/TILESET/ZONA INDUSTRIAL/ZONA INDUSTRIAL3/01.png" id="2_8l3f3"]
+[ext_resource type="Texture2D" uid="uid://cxrbe5a5wavnh" path="res://GameMAUMAU/TILESET/ZONA INDUSTRIAL/ZONA INDUSTRIAL3/02.png" id="3_bndgl"]
+[ext_resource type="Texture2D" uid="uid://d36f2fxmb5rjk" path="res://GameMAUMAU/TILESET/ZONA INDUSTRIAL/ZONA INDUSTRIAL3/03.png" id="4_cgka5"]
+[ext_resource type="Texture2D" uid="uid://dpo7dmxqmag2d" path="res://GameMAUMAU/TILESET/ZONA INDUSTRIAL/ZONA INDUSTRIAL3/04.png" id="5_7wp3i"]
+[ext_resource type="Texture2D" uid="uid://bg6607lke0foc" path="res://GameMAUMAU/TILESET/ZONA INDUSTRIAL/ZONA INDUSTRIAL3/05.png" id="6_vbif7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfm3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8l3f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bndgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cgka5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7wp3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vbif7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xub0h"]
+radius = 22.0
+height = 58.0
+
+[node name="Portal" type="Node2D"]
+script = ExtResource("1_4eyxn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_qfm3u")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8)
+shape = SubResource("CapsuleShape2D_xub0h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

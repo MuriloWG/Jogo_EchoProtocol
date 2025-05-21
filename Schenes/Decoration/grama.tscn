@@ -1,0 +1,77 @@
+[gd_scene load_steps=17 format=3 uid="uid://116x57pupv6g"]
+
+[ext_resource type="Texture2D" uid="uid://b1l8rx121ov42" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/1.png" id="1_rdu1h"]
+[ext_resource type="Texture2D" uid="uid://dayhe6pydj3uy" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/2.png" id="2_8q1hi"]
+[ext_resource type="Texture2D" uid="uid://dwjec0ow8ksur" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/3.png" id="3_monui"]
+[ext_resource type="Texture2D" uid="uid://bjnkemc423spw" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/4.png" id="4_3xfi8"]
+[ext_resource type="Texture2D" uid="uid://cy5n5dlkea6v0" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/5.png" id="5_wbdjy"]
+[ext_resource type="Texture2D" uid="uid://b5qg8sus2pnbw" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/6.png" id="6_ud3fd"]
+[ext_resource type="Texture2D" uid="uid://drul7x32h1ng7" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/7.png" id="7_it6p2"]
+[ext_resource type="Texture2D" uid="uid://2bv5q6r8o72v" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/8.png" id="8_3essw"]
+[ext_resource type="Texture2D" uid="uid://dguuy3rwebxrl" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/9.png" id="9_3v0d2"]
+[ext_resource type="Texture2D" uid="uid://7j0fb5so4pan" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/10.png" id="10_4jrun"]
+[ext_resource type="Texture2D" uid="uid://beo4x0ka6ian1" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/11.png" id="11_8jpbc"]
+[ext_resource type="Texture2D" uid="uid://s8djkddwkrnl" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/12.png" id="12_54vd7"]
+[ext_resource type="Texture2D" uid="uid://cm8u1yktsq3ee" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/13.png" id="13_d5dgh"]
+[ext_resource type="Texture2D" uid="uid://b454166bbtjeq" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/14.png" id="14_278w1"]
+[ext_resource type="Texture2D" uid="uid://lclw3pg63oqr" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/15.png" id="15_u1q5b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egsjb"]
+animations = [{
+"frames": [{
+"duration": 1.1,
+"texture": ExtResource("1_rdu1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8q1hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_monui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3xfi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wbdjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ud3fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_it6p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3essw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3v0d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4jrun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8jpbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_54vd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_d5dgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_278w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_u1q5b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="GRAMA" type="AnimatedSprite2D"]
+position = Vector2(24, 15)
+sprite_frames = SubResource("SpriteFrames_egsjb")
+autoplay = "default"
+frame = 12
+frame_progress = 0.579598

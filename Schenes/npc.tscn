@@ -1,0 +1,218 @@
+[gd_scene load_steps=12 format=3 uid="uid://c1t7oecdasn5q"]
+
+[ext_resource type="Script" path="res://Script/npc.gd" id="1_6mbeg"]
+[ext_resource type="Texture2D" uid="uid://dlgc4vyp5e5x7" path="res://GameMAUMAU/CHARACTER/Npc/Idle.png" id="1_vya85"]
+[ext_resource type="Texture2D" uid="uid://cksw3riu2lie1" path="res://GameMAUMAU/CHARACTER/Npc/Special.png" id="2_h4dcj"]
+[ext_resource type="FontFile" uid="uid://bxq5l1nkjko5a" path="res://GameMAUMAU/GUI_HUD GAME/10 Font/CyberpunkCraftpixPixel.otf" id="4_87u7g"]
+[ext_resource type="Texture2D" uid="uid://cb0q6mfw31is4" path="res://GameMAUMAU/GUNS/WEAPONS3/2 Guns/1_1.png" id="4_ei5e5"]
+
+[sub_resource type="Animation" id="Animation_t3poo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vya85")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qgivw"]
+resource_name = "conversa"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_h4dcj")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_h8mrq"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vya85")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Texture:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_64rmr"]
+_data = {
+"RESET": SubResource("Animation_t3poo"),
+"conversa": SubResource("Animation_qgivw"),
+"idle": SubResource("Animation_h8mrq")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r7gs"]
+size = Vector2(75, 55.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y1bba"]
+font = ExtResource("4_87u7g")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(1, 1, 1, 1)
+
+[node name="Npc" type="Node2D"]
+script = ExtResource("1_6mbeg")
+
+[node name="Texture" type="Sprite2D" parent="."]
+position = Vector2(8, -17)
+scale = Vector2(1.79167, 1.6875)
+texture = ExtResource("1_vya85")
+hframes = 4
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_64rmr")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, -2)
+shape = SubResource("RectangleShape2D_2r7gs")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -25.0
+offset_top = -56.0
+offset_right = 15.0
+offset_bottom = -33.0
+label_settings = SubResource("LabelSettings_y1bba")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -6.0
+offset_top = -38.0
+offset_bottom = -33.0
+texture_normal = ExtResource("4_ei5e5")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
