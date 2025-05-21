@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cg6h66n221fms" path="res://GameMAUMAU/TILESET/GREEN ZONE/1 Tiles/Tile_72.png" id="18_81m84"]
 [ext_resource type="Texture2D" uid="uid://bro0fwfgpqtyp" path="res://GameMAUMAU/TILESET/GREEN ZONE/1 Tiles/Tile_73.png" id="19_fi8vr"]
 [ext_resource type="Texture2D" uid="uid://b35qdmxa4chxw" path="res://GameMAUMAU/TILESET/GREEN ZONE/3 Objects/Grass/Terrain (32x32).png" id="20_hvy2t"]
-[ext_resource type="Texture2D" uid="uid://de1yj3r12cxed" path="res://GameMAUMAU/TILESET/1_Industrial_Tileset_1.png" id="21_uun6b"]
+[ext_resource type="Texture2D" uid="uid://1466hpfcxcoh" path="res://GameMAUMAU/TILESET/terrain_complete/1_Industrial_Tileset_1.png" id="21_uun6b"]
 [ext_resource type="Texture2D" uid="uid://6frspipx2eio" path="res://GameMAUMAU/TILESET/terrain_complete/1_Industrial_Tileset_1C.png" id="22_n5tni"]
 [ext_resource type="Texture2D" uid="uid://cqc266liknmlx" path="res://GameMAUMAU/TILESET/terrain_complete/2_Industrial_Tileset_1B_Background.png" id="23_8ahey"]
 
